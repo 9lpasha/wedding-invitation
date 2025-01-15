@@ -42,10 +42,6 @@
         font-size: 54px;
         line-height: 0.9;
       }
-      .main img {
-        width: 50px;
-        height: auto;
-      }
       .main span {
         transform: translate(0, 5px);
         font-size: 30px;
@@ -54,7 +50,9 @@
       .invitation,
       .location,
       .timing,
-      .dresscode {
+      .dresscode,
+      .wishes,
+      .organizator {
         padding: 16px 0;
         text-align: center;
         display: flex;
@@ -75,11 +73,13 @@
       .invitation img {
         width: 100dvw;
         height: auto;
+        margin-top: 40px;
       }
       .horizontal {
         width: 200px;
         border: 1px solid black;
         border-bottom: none;
+        transform-origin: center center;
       }
       .vertical {
         height: 30px;
@@ -94,7 +94,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
         margin: 0 auto;
         z-index: -1;
         opacity: 0.5;
@@ -152,6 +152,9 @@
         font-family: "Cormorant Infant", serif;
       }
 
+      .timing {
+        margin-top: 64px;
+      }
       .timing h2 {
         font-size: 54px;
         margin: 20px 0;
@@ -182,6 +185,10 @@
         transform: translate(0, -22px);
       }
 
+      .dresscode {
+        margin: 64px 0 0;
+        padding: 16px;
+      }
       .dresscode h2 {
         font-size: 54px;
         margin: 20px 0;
@@ -193,11 +200,84 @@
         font-size: 44px;
         margin: 20px 0;
         font-weight: 500;
-        color: rgb(186, 186, 186);
         font-family: "Great Vibes", serif;
         transform: translate(35px, 0);
         display: block;
         margin: 0;
+      }
+      .dresscode-circles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        margin-top: 20px;
+        margin-bottom: 128px;
+      }
+      .dresscode-circles > div {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 0px 0px rgba(81, 81, 81, 1);
+      }
+      .dresscode-back-circles {
+        position: relative;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-150px, 0);
+        z-index: -1;
+      }
+      .dresscode-back-circles > div {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        z-index: -1;
+        position: absolute;
+      }
+      .dresscode-back-circles > div:nth-child(1) {
+        background-color: white;
+        top: 10px;
+        left: 15px;
+      }
+      .dresscode-back-circles > div:nth-child(2) {
+        background-color: #eeeeee;
+        top: 25px;
+        left: -45px;
+      }
+      .dresscode-back-circles > div:nth-child(3) {
+        border: 1px solid rgb(151, 151, 151);
+        top: 0;
+        left: 0;
+      }
+      .dresscode p {
+        font-family: "Cormorant Infant", serif;
+        font-size: 24px;
+      }
+
+      .wishes {
+        padding: 0 16px;
+        margin-bottom: 32px;
+      }
+      .wishes h2 {
+        font-size: 54px;
+        margin: 20px 0;
+        font-weight: 500;
+      }
+      .wishes p {
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: 100;
+        font-family: "Cormorant Infant", serif;
+      }
+      .wishes img {
+        width: 87px;
+        height: 87px;
+      }
+
+      .organizator {
+        font-size: 20px;
+        font-family: "Cormorant Infant", serif;
+        margin: 64px;
       }
 
       .only-mobile {
@@ -249,10 +329,14 @@
       </div>
 
       <!-- Секция приглашения -->
-      <div class="invitation" data-aos="fade-right">
+      <div class="invitation" data-aos="fade-down">
         <h2>Дорогие гости!</h2>
-        <div class="horizontal" style="transform-origin: center center"></div>
-        <p>Свою любовь мы бы хотели разделить в этот особенный для нашей семьи день вместе с вами</p>
+        <div class="horizontal"></div>
+        <p>
+          Скоро наступит очень важный для нас день – мы станем семьей!
+          <br />
+          Мы приглашаем Вас на торжество, посвященное нашей свадьбе.
+        </p>
 
         <img src="public/date.jpg" alt="" />
 
@@ -261,7 +345,7 @@
       </div>
 
       <!-- Секция Location -->
-      <div class="location" data-aos="fade-left">
+      <div class="location" data-aos="zoom-in">
         <h2>Место <br /><span>проведения</span></h2>
         <h3>«Пихта»</h3>
         <p>База, дом отдыха. Набережные Челны, национальный парк Нижняя Кама</p>
@@ -312,7 +396,72 @@
       <div class="dresscode" data-aos="zoom-in">
         <h2>Дресс <br /><span>код</span></h2>
 
-        <div class="dresscode-circles"></div>
+        <div class="horizontal" style="width: 150px; border-bottom: 1px solid black"></div>
+
+        <div class="dresscode-circles">
+          <div style="background-color: #f6ebe4"></div>
+          <div style="background-color: #ccb6a8"></div>
+          <div style="background-color: #ae8d76"></div>
+          <div style="background-color: #6d4d36"></div>
+          <div style="background-color: #000000"></div>
+          <div style="background-color: #e4dad0"></div>
+          <div style="background-color: #b4a69d"></div>
+          <div style="background-color: #bca08a"></div>
+          <div style="background-color: #555555"></div>
+          <div style="background-color: #3f352b"></div>
+        </div>
+
+        <div class="dresscode-back-circles">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <p>Для нас главное - Ваше присутствие, но если вы поддержите нашу цветовую гамму, мы будем очень рады!</p>
+      </div>
+
+      <!-- Секция Пожелания -->
+      <div class="wishes" data-aos="zoom-in">
+        <h2>Пожелания</h2>
+        <p>
+          Не ломайте голову над подарками! Ваши конверты помогут нам осуществить мечту о свадебном путешествии.
+          <br />
+          <img src="public/icon1.png" /><br />
+          Приятным комплиментом для нас будет, если вместо цветов Вы решите подарить нам бутылочку вина для нашей
+          семейной винотеки.
+          <br />
+          <img src="public/icon2.png" /><br />
+          С заботой о Вас мы просим подготовить теплые одежду и обувь на устойчивом каблуке: торжество пройдет на
+          открытом воздухе.
+          <img src="public/icon3.png" /><br />
+          Не волнуйтесь о том, как добраться на наш праздник! Всех желающих будет ожидать автобус до и после мероприятия
+          (время и место сбора сообщим дополнительно)
+        </p>
+      </div>
+
+      <p
+        style="
+          color: white;
+          /* font-family: 'Cormorant Infant', serif; */
+          font-size: 36px;
+          transform: translate(0, 128px);
+          text-align: center;
+          margin: 0;
+        "
+      >
+        Мы вас очень ждём!
+      </p>
+      <img src="public/love.jpg" style="width: 100%; height: auto" alt="" />
+
+      <!-- Секция Организатор -->
+      <div class="organizator" data-aos="zoom-out">
+        <!-- <h2>Организатор</h2> -->
+        <p>
+          Если у Вас возникнут любые вопросы, просьба связаться с организатором нашей свадьбы:
+          <br />
+          <br />
+          Гульшат, 8 999 999 99 99
+        </p>
       </div>
     </div>
 
@@ -325,8 +474,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000, // Длительность анимации
-        once: true, // Анимация выполняется только один раз
+        duration: 1000,
+        once: true,
       });
     </script>
   </body>
