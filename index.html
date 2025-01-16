@@ -52,13 +52,15 @@
       .timing,
       .dresscode,
       .wishes,
-      .organizator {
-        padding: 16px 0;
+      .organizator,
+      .anketa {
+        padding: 16px;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
+
       .invitation h2 {
         font-size: 42px;
         margin: 20px 0;
@@ -76,10 +78,10 @@
         margin-top: 40px;
       }
       .horizontal {
-        width: 200px;
         border: 1px solid black;
-        border-bottom: none;
         transform-origin: center center;
+
+        width: 150px;
       }
       .vertical {
         height: 30px;
@@ -123,7 +125,8 @@
         font-weight: 500;
         font-family: "Cormorant Infant", serif;
       }
-      .location a {
+      .location a,
+      .anketa a {
         text-decoration: none;
 
         color: #393939;
@@ -187,7 +190,6 @@
 
       .dresscode {
         margin: 64px 0 0;
-        padding: 16px;
       }
       .dresscode h2 {
         font-size: 54px;
@@ -214,8 +216,8 @@
         margin-bottom: 128px;
       }
       .dresscode-circles > div {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
         box-shadow: 1px 1px 0px 0px rgba(81, 81, 81, 1);
       }
@@ -255,13 +257,16 @@
       }
 
       .wishes {
-        padding: 0 16px;
         margin-bottom: 32px;
       }
       .wishes h2 {
         font-size: 54px;
         margin: 20px 0;
         font-weight: 500;
+
+        text-decoration: underline;
+        text-underline-offset: 16px;
+        text-decoration-thickness: from-font;
       }
       .wishes p {
         font-size: 20px;
@@ -277,7 +282,24 @@
       .organizator {
         font-size: 20px;
         font-family: "Cormorant Infant", serif;
-        margin: 64px;
+        margin: 64px 0;
+      }
+
+      .anketa {
+        margin: 64px 0;
+      }
+      .anketa h2 {
+        font-weight: 500;
+        font-size: 54px;
+        margin: 20px 0;
+
+        text-decoration: underline;
+        text-underline-offset: 16px;
+        text-decoration-thickness: from-font;
+      }
+      .anketa p {
+        font-size: 20px;
+        font-family: "Cormorant Infant", serif;
       }
 
       .only-mobile {
@@ -330,8 +352,9 @@
 
       <!-- Секция приглашения -->
       <div class="invitation" data-aos="fade-down">
-        <h2>Дорогие гости!</h2>
-        <div class="horizontal"></div>
+        <h2 style="text-decoration: underline; text-underline-offset: 16px; text-decoration-thickness: from-font">
+          Дорогие гости!
+        </h2>
         <p>
           Скоро наступит очень важный для нас день – мы станем семьей!
           <br />
@@ -400,15 +423,15 @@
 
         <div class="dresscode-circles">
           <div style="background-color: #f6ebe4"></div>
-          <div style="background-color: #ccb6a8"></div>
-          <div style="background-color: #ae8d76"></div>
-          <div style="background-color: #6d4d36"></div>
-          <div style="background-color: #000000"></div>
+          <div style="background-color: #eddcd2"></div>
+          <div style="background-color: #dfc3b1"></div>
+          <div style="background-color: #ccaa92"></div>
+          <div style="background-color: #3f352b"></div>
           <div style="background-color: #e4dad0"></div>
           <div style="background-color: #b4a69d"></div>
           <div style="background-color: #bca08a"></div>
           <div style="background-color: #555555"></div>
-          <div style="background-color: #3f352b"></div>
+          <div style="background-color: #000000"></div>
         </div>
 
         <div class="dresscode-back-circles">
@@ -439,6 +462,27 @@
         </p>
       </div>
 
+      <!-- Секция Анкета -->
+      <div class="anketa" data-aos="zoom-out">
+        <h2>Анкета</h2>
+        <p>
+          Пожалуйста пройдите по ссылке ниже и заполните анкету до 01.07.25, это нам поможет лучше подготовиться к нашей
+          встрече с вами:
+        </p>
+
+        <a href="https://forms.yandex.ru/u/6788e7e7eb61464fb123134d/" target="_blank">АНКЕТА</a>
+      </div>
+
+      <!-- Секция Организатор -->
+      <div class="organizator" data-aos="zoom-out">
+        <p>
+          Если у Вас возникнут любые вопросы, просьба связаться с организатором нашей свадьбы:
+          <br />
+          <br />
+          Гульшат, +7 965 612 4212
+        </p>
+      </div>
+
       <p
         style="
           color: white;
@@ -452,17 +496,6 @@
         Мы вас очень ждём!
       </p>
       <img src="public/love.jpg" style="width: 100%; height: auto" alt="" />
-
-      <!-- Секция Организатор -->
-      <div class="organizator" data-aos="zoom-out">
-        <!-- <h2>Организатор</h2> -->
-        <p>
-          Если у Вас возникнут любые вопросы, просьба связаться с организатором нашей свадьбы:
-          <br />
-          <br />
-          Гульшат, 8 999 999 99 99
-        </p>
-      </div>
     </div>
 
     <div class="only-mobile">
