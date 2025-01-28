@@ -95,7 +95,7 @@
       .location {
         position: relative;
       }
-      .location img {
+      .location img:first-of-type {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -103,6 +103,9 @@
         margin: 0 auto;
         z-index: -1;
         opacity: 0.5;
+      }
+      .location img:last-of-type {
+        width: 100vw;
       }
       .location h2 {
         font-size: 54px;
@@ -128,6 +131,13 @@
         font-weight: 500;
         font-family: "Cormorant Infant", serif;
       }
+      .location p {
+        font-size: 24px;
+        margin: 20px 0;
+        font-weight: 500;
+        font-family: "Cormorant Infant", serif;
+      }
+
       .location a,
       .anketa a {
         text-decoration: none;
@@ -150,12 +160,6 @@
         outline: none;
         vertical-align: middle;
         padding: 10px 20px;
-      }
-      .location p {
-        font-size: 24px;
-        margin: 20px 0;
-        font-weight: 100;
-        font-family: "Cormorant Infant", serif;
       }
 
       .timing {
@@ -396,8 +400,9 @@
       </div>
 
       <!-- Секция Location -->
-      <div class="location animate">
+      <div class="location animate" style="padding-bottom: 0">
         <h2>Место <br /><span>проведения</span></h2>
+
         <h3>«Пихта»</h3>
         <p>База, дом отдыха. Набережные Челны, национальный парк Нижняя Кама</p>
 
@@ -406,8 +411,11 @@
         <a
           href="https://yandex.ru/maps/org/pikhta/191449159572/?ll=52.465392%2C55.851152&utm_source=main_stripe_big&z=15.48"
           target="_blank"
+          style="margin-bottom: 20px"
           >ПОСМОТРЕТЬ КАРТУ</a
         >
+
+        <img src="public/pihta.png" alt="" />
       </div>
 
       <!-- Секция Timing -->
